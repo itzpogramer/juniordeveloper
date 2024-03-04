@@ -56,13 +56,20 @@
             <input type="submit" value="Submit">
         </form>
     </div>
-
     <script>
-        // JavaScript code for toggling navbar menu on mobile
-        document.getElementById('navbarToggle').addEventListener('click', function() {
-            var navbarNav = document.getElementById('navbarNav');
-            navbarNav.classList.toggle('show');
+        // Wait for the DOM content to be fully loaded
+        document.addEventListener("DOMContentLoaded", function() {
+          // Select the navbar toggle button and the navbar menu
+          const navbarToggle = document.querySelector('.navbar-toggler');
+          const navbarMenu = document.querySelector('.navbar-collapse');
+      
+          // Add a click event listener to the navbar toggle button
+          navbarToggle.addEventListener('click', function() {
+            // Toggle the 'show' class on the navbar menu
+            navbarMenu.classList.toggle('show');
+          });
         });
-    </script>
+      </script>
+      
 </body>
 </html>
