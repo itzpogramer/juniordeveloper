@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junior Devloper Contact</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <h3>Junior Developer</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <button type="button" class="rounded-pill btn-rounded">
+                    +880 1919034007
+                    <span>
+                        <img src="images/services/phone.png" alt="icon" style="width: 28px; height: 30px; margin-left: 1px; padding-top: 6px;">
+                    </span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container2">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div>
+                <label for="name">Your Name <span>*</span></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Your Email <span>*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject">
+            </div>
+            <div>
+                <label for="message">Message <span>*</span></label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("YOUR_USER_ID"); // Initialize EmailJS with your user ID
+        })();
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Get form data
+            const formData = new FormData(this);
+
+            // Send the form data to your Gmail using EmailJS
+            emailjs.sendForm('service_475nkmg', '__ejs-test-mail-service__', formData)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Your message has been sent successfully!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Oops! An error occurred, please try again later.');
+                });
+
+            // Clear the form fields after submission
+            this.reset();
+        });
+    </script>
+</body>
+</html>
