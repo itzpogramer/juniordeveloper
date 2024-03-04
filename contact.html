@@ -57,32 +57,7 @@
         </form>
     </div>
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-        (function() {
-            emailjs.init("YOUR_USER_ID"); // Initialize EmailJS with your user ID
-        })();
-
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the form from submitting normally
-
-            // Get form data
-            const formData = new FormData(this);
-
-            // Send the form data to your Gmail using EmailJS
-            emailjs.sendForm('service_475nkmg', '__ejs-test-mail-service__', formData)
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    alert('Your message has been sent successfully!');
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    alert('Oops! An error occurred, please try again later.');
-                });
-
-            // Clear the form fields after submission
-            this.reset();
-        });
-
         // JavaScript code for toggling navbar menu on mobile
         document.getElementById('navbarToggle').addEventListener('click', function() {
             var navbarNav = document.getElementById('navbarNav');
