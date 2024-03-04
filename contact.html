@@ -83,5 +83,32 @@
             this.reset();
         });
     </script>
+    <script>
+        // JavaScript code
+        window.onload = function() {
+          var infoSection = document.querySelector('.info');
+          var toggleButton = document.getElementById('toggleButton');
+      
+          function toggleInfoSection() {
+            if (infoSection.style.display === 'none' || infoSection.style.display === '') {
+              infoSection.style.display = 'block';
+            } else {
+              infoSection.style.display = 'none';
+            }
+          }
+      
+          toggleButton.addEventListener('click', toggleInfoSection);
+      
+          // Check if the page is viewed on a mobile device
+          function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+          }
+      
+          if (isMobileDevice()) {
+            // Hide the info section by default on mobile devices
+            infoSection.style.display = 'none';
+          }
+        };
+      </script>
 </body>
 </html>
