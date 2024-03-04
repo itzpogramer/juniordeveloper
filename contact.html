@@ -24,12 +24,13 @@
                     <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
-                <button type="button" class="rounded-pill btn-rounded">
+                <!-- Use tel attribute to set the phone number -->
+                <a href="tel:+8801919034007" class="rounded-pill btn-rounded">
                     +880 1919034007
                     <span>
                         <img src="phone.png" alt="icon" style="width: 28px; height: 30px; margin-left: 1px; padding-top: 6px;">
                     </span>
-                </button>
+                </a>
             </div>
         </div>
     </nav>
@@ -56,20 +57,13 @@
             <input type="submit" value="Submit">
         </form>
     </div>
+
     <script>
-        // Wait for the DOM content to be fully loaded
-        document.addEventListener("DOMContentLoaded", function() {
-          // Select the navbar toggle button and the navbar menu
-          const navbarToggle = document.querySelector('.navbar-toggler');
-          const navbarMenu = document.querySelector('.navbar-collapse');
-      
-          // Add a click event listener to the navbar toggle button
-          navbarToggle.addEventListener('click', function() {
-            // Toggle the 'show' class on the navbar menu
-            navbarMenu.classList.toggle('show');
-          });
+        // JavaScript code for toggling navbar menu on mobile
+        document.getElementById('navbarToggle').addEventListener('click', function() {
+            var navbarNav = document.getElementById('navbarNav');
+            navbarNav.classList.toggle('show');
         });
-      </script>
-      
+    </script>
 </body>
 </html>
