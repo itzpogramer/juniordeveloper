@@ -1,76 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junior Devloper Contact</title>
-    <link rel="stylesheet" href="contact.css">
-</head>
-<body>
-    <style>
-        /* Remove underline and set color to black for phone number link */
-        a.btn-rounded {
-            text-decoration: none;
-            color: black;
-        }
-    </style>
-    <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <h3>Junior Developer</h3>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggle">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#blog">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-                <!-- Use tel attribute to set the phone number -->
-                <a href="tel:+8801919034007" class="rounded-pill btn-rounded">
-                    +880 1919034007
-                    <span>
-                        <img src="phone.png" alt="icon" style="width: 28px; height: 30px; margin-left: 1px; padding-top: 6px;">
-                    </span>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Junior Devloper Contact</title>
+        <link rel="stylesheet" href="contact.css">
+    </head>
+    <body>
+        <style>
+            /* Remove underline and set color to black for phone number link */
+            a.btn-rounded {
+                text-decoration: none;
+                color: black;
+            }
+        </style>
+        <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <h3>Junior Developer</h3>
                 </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggle">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Testimonials</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <button type="button" class="rounded-pill btn-rounded" onclick="window.location.href = 'tel:+8801919034007';">
+                        +880 1919034007
+                        <span>
+                            <img src="phone.png" alt="icon" style="width: 28px; height: 30px; margin-left: 1px; padding-top: -5px; margin-top: 5px;">
+                        </span>
+                    </a>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <div class="container2">
-        <h2>Contact Us</h2>
-        <form id="contactForm">
-            <div>
-                <label for="name">Your Name <span>*</span></label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div>
-                <label for="email">Your Email <span>*</span></label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject">
-            </div>
-            <div>
-                <label for="message">Message <span>*</span></label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <input type="submit" value="Submit">
-        </form>
-    </div>
 
-    <script>
-        // JavaScript code for toggling navbar menu on mobile
-        document.getElementById('navbarToggle').addEventListener('click', function() {
-            var navbarNav = document.getElementById('navbarNav');
-            navbarNav.classList.toggle('show');
-        });
-    </script>
-</body>
-</html>
+
+
+
+
+
+
+
+        <!-- contact from -->
+        <section class="contact">
+            <h2>Contact Us</h2>
+    
+            <form action="#">
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off">
+                        <div class="error-txt">Full name can't be black</div>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" placeholder="Email Address" id="email" class="item" autocomplete="off">
+                        <div class="error-txt">Email Address can't be blank</div>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <div class="input-field">
+                        <input type="text" placeholder="Phone Number" id="phone" class="item" autocomplete="off">
+                        <div class="error-txt">Phone Number can't be blank</div>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off">
+                        <div class="error-txt">Subject can't be blank</div>
+                    </div>
+    
+                </div>
+    
+                <div class="text-field">
+                    <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message" class="item" autocomplete="off"></textarea>
+                    <div class="error-txt">Subject can't be blank</div>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+
+
+        <!-- contact from close -->
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+        <script src="contact.js"></script>
+        <script>
+            // JavaScript code for toggling navbar menu on mobile
+            document.getElementById('navbarToggle').addEventListener('click', function() {
+                var navbarNav = document.getElementById('navbarNav');
+                navbarNav.classList.toggle('show');
+            });
+        </script>
+    </body>
+    </html>
