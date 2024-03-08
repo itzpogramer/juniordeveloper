@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junior Devloper Contact</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <style>
+        /* Remove underline and set color to black for phone number link */
+        a.btn-rounded {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <h3>Junior Developer</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <button type="button" class="rounded-pill btn-rounded" onclick="window.location.href = 'tel:+8801919034007';">
+                    +880 1919034007
+                    <span>
+                        <img src="phone.png" alt="icon" style="width: 28px; height: 30px; margin-left: 1px; padding-top: -5px; margin-top: 5px;">
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- card start -->
+    <div class="card-container">
+        <div class="card">
+            <img src="imghover1.png" class="card-img-top" alt="Card Image">
+            <div class="card-body">
+                <h5 class="card-title">Image Hover Animation</h5>
+                <p class="card-text">There have some image hover animation's. just copy and paste it on your code.</p>
+                <a href="imghover.html" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="buttonimg.png" class="card-img-top" alt="Card Image" style="max-width: 95%; height: 140px; margin-left: 12px; ">
+            <div class="card-body">
+                <h5 class="card-title">Button Hover Animation</h5>
+                <p class="card-text">There have some Button hover animation's just copy and paste it on your code.</p>
+                <a href="buttonhover.html" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="loaddingscrenimg.png" class="card-img-top" alt="Card Image" style="max-width: 45%; height: 140px; margin-left: 80px; ">
+            <div class="card-body">
+                <h5 class="card-title">Loading Animation</h5>
+                <p class="card-text">There are some loading animations. Just copy and paste them into your code.</p>
+                <a href="loodinganimation.html" class="btn btn-primary">Read More</a>
+            </div>
+        </div>
+        
+    </div>
+
+    
+    <script>
+        // JavaScript code for toggling navbar menu on mobile
+        document.getElementById('navbarToggle').addEventListener('click', function() {
+            var navbarNav = document.getElementById('navbarNav');
+            navbarNav.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
