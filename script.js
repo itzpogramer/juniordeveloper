@@ -153,10 +153,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Add animation styles
     servicesContainer.style.opacity = '1';
-    servicesContainer.style.transform = 'translateY(0)';
+    servicesContainer.style.transform = 'translateY(50)';
 
     // Remove transition after animation
     setTimeout(function() {
         servicesContainer.style.transition = 'none';
-    }, 800); // Adjust the time to match the transform duration
+    }, 1500); // Adjust the time to match the transform duration
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    var servicesContainer = document.getElementById("services-container");
+    
+    function animateServices() {
+      var rect = servicesContainer.getBoundingClientRect();
+      var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      
+      if (rect.top >= 0 && rect.bottom <= windowHeight) {
+        servicesContainer.classList.add("services-entered");
+        window.removeEventListener("scroll", animateServices);
+      }
+    }
+    
+    window.addEventListener("scroll", animateServices);
+  });
+  
